@@ -1,0 +1,51 @@
+{
+  "name": "jest-sample",
+  "version": "1.0.0",
+  "description": "jest sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinogam/jest-sample.git"
+  },
+  "keywords": [
+    "jest",
+    "sample"
+  ],
+  "author": "kinogam@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kinogam/jest-sample/issues"
+  },
+  "homepage": "https://github.com/kinogam/jest-sample#readme",
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "html-loader": "^0.5.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "\\.html$": "<rootDir>/mock/html-loader-transformer.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node",
+      "html"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  }
+}
