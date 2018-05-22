@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="avalon.js"></script>
+    <script src="main-component.js"></script>
+    <script src="sub-component.js"></script>
+
+</head>
+<body>
+    <div ms-controller="test">
+        hello, {{name}}
+
+        <div is="ms-main"></div>
+    </div>
+
+
+
+    <script>
+
+        avalon.define({
+            $id: 'test',
+            name: 'kinogam'
+        })
+    </script>
+</body>
+</html>
