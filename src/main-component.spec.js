@@ -52,7 +52,7 @@ describe('main', () => {
 
 
     beforeEach(() => {
-        createInstance(main);
+
     });
 
     afterEach(() => {
@@ -63,13 +63,16 @@ describe('main', () => {
 
     // 测试子项
     describe('transcation detail', () => {
-        it('should change options value in sub component', done => {
+        beforeEach(done => {
+            createInstance(main);
 
             setTimeout(() => {
-                expect(vm.options.value).toBe('this is B');
                 done();
-            }, 600);
+            });
 
+        });
+        it('should change options value in sub component', () => {
+            expect(vm.options.value).toBe('this is B');
         });
 
     })
